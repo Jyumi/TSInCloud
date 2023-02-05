@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
-  </head>
-  <body>
+
+    <script type="text/javascript" src="functions.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
     <main>
-        <div>Test</div>
+
+        <button class="btn--fab js-sidenav"><i class="icon ion-navicon"></i></button>
+
+        <div class="wrapper">
+            <nav class="sidenav">
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+            </nav>
+            <section class="content">
+                <header class="options">
+                    <label class="btn-toggle"><input class="js-sidenav-type" type="radio" name="sidenav-type"
+                            value="default" checked> <span>Default</span></label>
+                    <label class="btn-toggle"><input class="js-sidenav-type" type="radio" name="sidenav-type"
+                            value="overlay"><span>Overlay</span></label>
+                    <label class="btn-toggle"><input class="js-sidenav-type" type="radio" name="sidenav-type"
+                            value="push"><span>Push</span></label>
+                    <label class="btn-toggle"><input class="js-sidenav-type" type="radio" name="sidenav-type"
+                            value="reveal"><span>Reveal</span></label>
+                </header>
+
+                <article>
+                    <h1><span class="icon ion-ios-color-wand"></span> Sidenav</h1>
+
+                    <p>A minimal kick start for off-canvas menu component. Zero style, just structural. Use the menu
+                        above to switch between off-canvas types and then trigger in the bottom menu button.</p>
+
+                    <div class="callout callout--info">Minimal style for demo purposes</div>
+
+                    <h2>Usage</h2>
+
+                    <p>You only need a <code>wrapper</code> and inside it add two more elements, a <code>nav</code> and
+                        one <code>main</code> content. Then use the modifiers classes to apply the desired transition
+                        and that's it, done.</p>
+
+                    <div class="callout callout--info">
+                        <p><strong>Feel free to change the classes names and tags, but still need keep the
+                                properties</strong></p>
+                        <p>If you don't want to use modifiers you also can copy the properties into the modifier and
+                            paste to main <code>.sidenav</code> class, just pay attention with some modifiers that need
+                            change properties in the content tag.</p>
+                    </div>
+
+                    <h2>Javascript</h2>
+                    <p>To transition between states you just need to toggle the class <code>.active</code> in
+                        <code>.sidenav</code>. If you wanna, I wrote a very basic plugin(?) to do that, feel free to
+                        use. You only need to copy the code, and remeber to initialize the plugin using the right
+                        reference for your <code>.navbar</code>.
+
+                    <div class="callout callout--info">If you change the classes names use
+                        <code>$(".newClassName").sidenav()</code></div>
+
+                    <p>For the menu icon, you just need to add the class <code>.js-sidenav</code>. Again, feel free to
+                        change this on the code.</p>
+                </article>
+            </section>
+        </div>
     </main>
-  </body>
+</body>
+
 </html>
